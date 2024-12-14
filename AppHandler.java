@@ -170,28 +170,42 @@ public class AppHandler {
 
     try {
 
-      if (operation == 1 || operation == 2) {
-        for (int i = 1; i < 3; i++) {
-
-          FileReader fis = new FileReader(new File(this.files[i]));
+      if (operation == 1) {
+        FileReader fis = new FileReader(new File(this.files[1]));
     
-          BufferedReader reader = new BufferedReader(fis);
+        BufferedReader reader = new BufferedReader(fis);
 
-          String line = reader.readLine();
+        String line = reader.readLine();
 
-          while (line != null) {
-            report += line + "\n";
-            line = reader.readLine();
-          }
+        while (line != null) {
+          report += line + "\n";
+          line = reader.readLine();
+        }
+      }
+      if (operation == 2) {
+        FileReader fis = new FileReader(new File(this.files[2]));
+    
+        BufferedReader reader = new BufferedReader(fis);
+
+        String line = reader.readLine();
+
+        while (line != null) {
+          report += line + "\n";
+          line = reader.readLine();
         }
       }
 
-      if (operation == 3 || operation == 4) {
-        for (int i = 3; i < 5; i++) {
-          Scanner scanner = new Scanner(new File(this.files[i]));
-          while (scanner.hasNext()) {
-            report += scanner.nextLine() + "\n";
-          }
+      if (operation == 3) {
+        Scanner scanner = new Scanner(new File(this.files[3]));
+        while (scanner.hasNext()) {
+          report += scanner.nextLine() + "\n";
+        }
+      }
+      
+      if (operation == 4) {
+        Scanner scanner = new Scanner(new File(this.files[4]));
+        while (scanner.hasNext()) {
+          report += scanner.nextLine() + "\n";
         }
       }
       
