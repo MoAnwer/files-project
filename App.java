@@ -1,3 +1,8 @@
+/**
+ * @author mohamed_anwer
+ * @see https://github.com/MoAnwer/files-project
+ */
+
 import java.util.Scanner;
 
 public class App {
